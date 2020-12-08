@@ -8,21 +8,14 @@ import org.testng.annotations.Test;
 import com.acti.base.DriverScript;
 import com.acti.pages.LoginPage;
 
-public class TC001_LoginTest extends  DriverScript {
+public class TC001_LoginTest extends BaseTest {
 	
-	
-	@BeforeMethod
-	public void preCondition()
-	{
-		initBrowser();	
-		launchApplication();
-	}
 	
 	
 	@Test
 	public void testLoginFuntion()
 	{
-		LoginPage lp = new LoginPage();
+
 		lp.loginToApplication("admin", "manager");
 		
 	}
@@ -35,10 +28,5 @@ public class TC001_LoginTest extends  DriverScript {
 		System.out.println(flag);
 	}
 	
-	@AfterMethod
-	public void postCondition()
-	{
-		closeApplication();
-	}
-
+	
 }
